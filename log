@@ -124,3 +124,19 @@ Thu 28 Mar 2024 04:34:58 PM UTC:
  tests:  5|4
 total_score: 25/70
 a6b61d1
+Thu 28 Mar 2024 04:42:38 PM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:59:9: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   59 |   while(current != NULL){
+      |         ^~~~~~~
+      |         popCurrent
+list.c:59:9: note: each undeclared identifier is reported only once for each function it appears in
+list.c:58:9: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   58 |   Node* nodo = list -> head;
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+763f4f3
