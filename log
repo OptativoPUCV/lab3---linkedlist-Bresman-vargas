@@ -82,3 +82,21 @@ Thu 28 Mar 2024 04:28:53 PM UTC:
  tests:  2|5
 total_score: 15/70
 891d89d
+Thu 28 Mar 2024 04:31:59 PM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:50:6: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   50 |   if(lista -> current != NULL){
+      |      ^~~~~
+      |      list
+list.c:50:6: note: each undeclared identifier is reported only once for each function it appears in
+list.c:51:35: error: expected ‘;’ before ‘list’
+   51 |     return list -> current -> next
+      |                                   ^
+      |                                   ;
+   52 |     list -> current = list -> current -> next;
+      |     ~~~~                           
+Compilation failed
+d272b51
