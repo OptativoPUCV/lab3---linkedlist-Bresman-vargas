@@ -29,7 +29,7 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-  List nuevaLista = ((List *) malloc(sizeof(List));
+  List *nuevaLista = (List *)malloc(sizeof(List));
   //En caso de error en la reserva 
   assert(nuevaLista != NULL);
   nuevaLista->head = NULL;
