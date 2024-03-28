@@ -236,3 +236,9 @@ list.c:88:5: error: ‘lit’ undeclared (first use in this function); did you m
 list.c:88:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 199544f
+Thu 28 Mar 2024 05:34:39 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|2
+total_score: 45/70
+fad936e
