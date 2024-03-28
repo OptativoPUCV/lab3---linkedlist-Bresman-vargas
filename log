@@ -1,0 +1,35 @@
+Thu 28 Mar 2024 04:27:29 PM UTC: 
+ list.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:21: error: invalid initializer
+   32 |   List nuevaLista = (List *) malloc(sizeof(List));
+      |                     ^
+In file included from list.c:3,
+                 from test.c:5:
+list.c:34:21: error: invalid operands to binary != (have ‘List’ {aka ‘struct List’} and ‘void *’)
+   34 |   assert(nuevaLista != NULL);
+      |                     ^~
+list.c:34:21: error: invalid operands to binary != (have ‘List’ {aka ‘struct List’} and ‘void *’)
+   34 |   assert(nuevaLista != NULL);
+      |                     ^~
+In file included from test.c:5:
+list.c:35:13: error: invalid type argument of ‘->’ (have ‘List’ {aka ‘struct List’})
+   35 |   nuevaLista->head = NULL;
+      |             ^~
+list.c:36:13: error: invalid type argument of ‘->’ (have ‘List’ {aka ‘struct List’})
+   36 |   nuevaLista->tail = NULL;
+      |             ^~
+list.c:37:13: error: invalid type argument of ‘->’ (have ‘List’ {aka ‘struct List’})
+   37 |   nuevaLista->current = NULL;
+      |             ^~
+list.c:38:10: error: incompatible types when returning type ‘List’ {aka ‘struct List’} but ‘List *’ {aka ‘struct List *’} was expected
+   38 |   return nuevaLista;
+      |          ^~~~~~~~~~
+list.c:39:1: error: control reaches end of non-void function [-Werror=return-type]
+   39 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1000ead

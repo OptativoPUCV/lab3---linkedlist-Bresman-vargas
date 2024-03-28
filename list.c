@@ -29,11 +29,21 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-     return NULL;
+  List nuevaLista = (List *) malloc(sizeof(List));
+  //En caso de error en la reserva 
+  assert(nuevaLista != NULL);
+  nuevaLista->head = NULL;
+  nuevaLista->tail = NULL;
+  nuevaLista->current = NULL;
+  return nuevaLista;
 }
 
 void * firstList(List * list) {
-    return NULL;
+  if(list -> head != NULL){
+    list -> current = list -> head;
+    return list-> head-> data;
+  }
+  return NULL;
 }
 
 void * nextList(List * list) {
