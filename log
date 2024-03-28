@@ -189,3 +189,14 @@ list.c:74:7: error: ‘prevn’ undeclared (first use in this function); did you
 list.c:74:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 b87fd0c
+Thu 28 Mar 2024 05:02:50 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:70:14: error: ‘List’ {aka ‘struct List’} has no member named ‘cuurent’; did you mean ‘current’?
+   70 |   if(list -> cuurent != NULL && list -> current != list -> head){
+      |              ^~~~~~~
+      |              current
+Compilation failed
+546f42e
