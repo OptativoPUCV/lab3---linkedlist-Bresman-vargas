@@ -100,3 +100,16 @@ list.c:51:35: error: expected ‘;’ before ‘list’
       |     ~~~~                           
 Compilation failed
 d272b51
+Thu 28 Mar 2024 04:32:09 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:51:35: error: expected ‘;’ before ‘list’
+   51 |     return list -> current -> next
+      |                                   ^
+      |                                   ;
+   52 |     list -> current = list -> current -> next;
+      |     ~~~~                           
+Compilation failed
+9fdb86b
