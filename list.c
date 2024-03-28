@@ -56,7 +56,7 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
   if(list -> head != NULL){
-    Node* nodo = list -> head;
+    Node* current = list -> head;
     while(current != NULL){
       current = current -> next;
     }
