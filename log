@@ -224,3 +224,15 @@ list.c:88:5: error: ‘lit’ undeclared (first use in this function); did you m
 list.c:88:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 6de8f60
+Thu 28 Mar 2024 05:34:32 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:88:5: error: ‘lit’ undeclared (first use in this function); did you mean ‘list’?
+   88 |     lit -> tail = newNode;
+      |     ^~~
+      |     list
+list.c:88:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+199544f
