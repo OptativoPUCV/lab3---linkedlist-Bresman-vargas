@@ -140,3 +140,19 @@ list.c:58:9: error: unused variable ‘nodo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 763f4f3
+Thu 28 Mar 2024 04:45:15 PM UTC: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:60:11: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   60 |     while(current != NULL){
+      |           ^~~~~~~
+      |           popCurrent
+list.c:60:11: note: each undeclared identifier is reported only once for each function it appears in
+list.c:59:11: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   59 |     Node* nodo = list -> head;
+      |           ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fb0ad9f

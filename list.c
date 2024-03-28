@@ -55,11 +55,14 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-  Node* nodo = list -> head;
-  while(current != NULL){
-    current = current -> next;
+  if(list -> head != NULL){
+    Node* nodo = list -> head;
+    while(current != NULL){
+      current = current -> next;
+    }
+    list -> current = current;
+    return list -> current -> data;
   }
-  list -> current = current;
   return NULL;
 }
 
