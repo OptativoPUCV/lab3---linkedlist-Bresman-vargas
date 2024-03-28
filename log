@@ -206,3 +206,21 @@ Thu 28 Mar 2024 05:03:11 PM UTC:
  tests:  9|3
 total_score: 35/70
 804c656
+Thu 28 Mar 2024 05:33:46 PM UTC: 
+ list.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:84:19: error: too few arguments to function ‘createNode’
+   84 |   Node *newNode = createNode();
+      |                   ^~~~~~~~~~
+list.c:22:8: note: declared here
+   22 | Node * createNode(void * data) {
+      |        ^~~~~~~~~~
+list.c:88:5: error: ‘lit’ undeclared (first use in this function); did you mean ‘list’?
+   88 |     lit -> tail = newNode;
+      |     ^~~
+      |     list
+list.c:88:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6de8f60
