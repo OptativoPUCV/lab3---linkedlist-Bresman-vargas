@@ -99,6 +99,25 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  if(list == NULL){
+    return;
+  }
+  Node * nuevoNodo = (Node *)malloc(sizeof(Node));
+  assert(nuevoNodo != NULL);
+  nuevoNodo->data = data;
+
+  if(list -> head == NULL){
+    nuevoNodo->next = NULL;
+    list->head = nuevoNodo;
+    list->current = nuevoNodo;
+  } else {
+    if(list->current == NULL){
+      return;
+    }
+  }
+  nuevoNodo->next = list->current->next;
+  list->current->next = nuevoNodo;
+  list->current = nuevoNodo;
 }
 
 void * popFront(List * list) {
